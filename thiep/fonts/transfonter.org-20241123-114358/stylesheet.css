@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MTD Doppelganger Display';
+    src: url('MTDDoppelgangerDisplay.woff2') format('woff2'),
+        url('MTDDoppelgangerDisplay.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
