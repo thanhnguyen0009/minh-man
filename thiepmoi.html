@@ -86,7 +86,7 @@
 
             <div class="box-form" >
                 <!-- <img src="./thiep/anh/pic11-12.webp" alt="" class="img-form"> -->
-                <form action="" name="#">
+                <form action="" name="minh-man">
                     <div class="feed-info">
                         <label for="" class="lb-kind">Kindly</label>
                         <label for="" class="rsvp">RSVP</label>
@@ -110,17 +110,17 @@
                     </div>
                     <div class="box-ten">
                         <input required class="inp-ten" type="text"  name="NAME" placeholder="NAME">
-                        <input required class="inp-ten" type="text"  name="GUESTS" placeholder="GUESTS" maxlength="1" pattern="[0-9]{10}">
+                        <input required class="inp-ten" type="text"  name="GUESTS" placeholder="GUESTS" maxlength="1">
                     </div>
                     <!-- <div class="til">
                         <label for="" class="title">BẠN LÀ BẠN BÈ, ĐỒNG NGHIỆP HAY NGƯỜI THÂN CỦA...?</label>
                     </div> -->
                     <div class="container-check">
-                        <input class="box-feed" type="radio" value="non" id="non" name="VEGETARIAN">
+                        <input class="box-feed" type="radio" value="NON - VEGETARIAN" id="non" name="VEGETARIAN">
                         <label class="check-box2" for="non">
                             <h3 class="til-check">NON - VEGETARIAN</h3>
                         </label>
-                        <input class="box-feed" type="radio" value="ye" id="ye" name="VEGETARIAN">
+                        <input class="box-feed" type="radio" value="VEGETARIAN" id="ye" name="VEGETARIAN">
                         <label class="check-box2" for="ye"> 
                             <h3 class="til-check">VEGETARIAN</h3>
                         </label>
@@ -144,8 +144,8 @@
         </div>
     </div>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyGZM9Kmfmrw3l6RWZ2NQ6AiUGrkPLRkpFaHb2eIFkm6dOn842gfbFxn_U3mYF6XGiz/exec';
-        const form = document.forms['lam-oanh'];
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby_NxHKzY-dBJclS6_GY9eOSvQQVLki0uzBfDBsWBCK2iO7wrEJr0Qugc-CUjJ7wVT9/exec';
+        const form = document.forms['minh-man'];
     
         form.addEventListener('submit', e => {
     e.preventDefault(); // Ngừng việc gửi form mặc định
