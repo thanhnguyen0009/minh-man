@@ -150,7 +150,7 @@
     e.preventDefault(); // Ngừng việc gửi form mặc định
 
     // Hiển thị thông báo cảm ơn ngay khi nhấn gửi
-    alert('CẢM ƠN BẠN ĐÃ PHẢN HỒI! Dữ liệu gửi về sẽ mất khoảng một vài giây, nhấn "OK" và đợi form tự làm mới lại nhé <3');
+    alert('THANK YOU FOR YOUR RESPONSE! The data being sent will take a few seconds. Please click "OK" and wait for the form to refresh automatically.');
 
     // Gửi dữ liệu form đi
     fetch(scriptURL, { 
@@ -161,7 +161,7 @@
         if (response.ok) {
             // Nếu dữ liệu gửi thành công, làm mới lại form
             form.reset(); // Làm mới lại form
-            alert('Thông tin đã được gửi về dâu/rể!!');
+            alert('The information has been sent!!');
         } else {
             // Nếu gặp lỗi khi gửi dữ liệu
             console.error('Error!', response);
