@@ -744,6 +744,52 @@ textarea{
 }
 
 
+
+.circle {
+  position: fixed;
+  top: 20px; /* Đẩy hình tròn lên phía trên cùng */
+  right: 20px; /* Vị trí của hình tròn căn phải */
+  width: 80px;
+  height: 80px;
+  /* background-color: #3498db; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Đảm bảo hình ảnh không bị tràn ra ngoài */
+  transition: transform 1s linear; /* Chuyển động mượt mà */
+  z-index: 2; /* Đảm bảo hình tròn nổi bật trên các phần tử khác */
+}
+
+/* Khi hình tròn được hover */
+.circle:hover {
+  /* background-color: #2980b9; */
+}
+
+/* Hình ảnh bên trong hình tròn */
+.circle-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Hiệu ứng xoay liên tục */
+.circle.spin {
+  animation: spin 1s linear infinite; /* Xoay liên tục */
+}
+
+/* Định nghĩa hoạt ảnh xoay */
+@keyframes spin {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
 /* ================================ */
 
 @media (max-width: 480px){

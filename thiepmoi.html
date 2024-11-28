@@ -23,6 +23,10 @@
 
     <div class="container">
         <div class="container-wrapper">
+            <div class="circle" id="musicCircle">
+                <img src="./thiep/anh/cd.png" alt="Music Icon" class="circle-image">
+                <audio id="audio" src="./thiep/anh/Twinkling Lights (Reimagined) - Auni.mp3"></audio>
+            </div>
             <div class="gif-top">
                 <img src="./thiep/anh/IMG_1855.GIF" alt="" class="img-gif">
             </div>
@@ -100,11 +104,11 @@
                     <div class="container-check">
                         <input class="box-feed" type="radio" value="ACCEPTS" id="yes" name="CONFIRM">
                         <label class="check-box2" for="yes">
-                            <h3 class="til-check">ACCEPTS WITH PLEASURE</h3>
+                            <h3 class="til-check">ACCEPT WITH PLEASURE</h3>
                         </label>
                         <input class="box-feed" type="radio" value="DECLINES" id="no" name="CONFIRM">
                         <label class="check-box2" for="no"> 
-                            <h3 class="til-check">DECLINES WITH REGRET</h3>
+                            <h3 class="til-check">DECLINE WITH REGRET</h3>
                         </label>
                     </div>
                     <div class="box-ten">
@@ -270,6 +274,22 @@
         });
 
      </script>
+     <script>
+        const musicCircle = document.getElementById("musicCircle");
+  const audio = document.getElementById("audio");
+  
+  // Thêm sự kiện khi nhấn vào hình tròn
+  musicCircle.addEventListener("click", function () {
+      // Nếu nhạc đang dừng và hình tròn không xoay
+      if (audio.paused) {
+          audio.play(); // Phát nhạc
+          musicCircle.classList.add("spin"); // Bắt đầu xoay liên tục
+      } else {
+          audio.pause(); // Dừng nhạc nếu đang phát
+          musicCircle.classList.remove("spin"); // Dừng xoay
+      }
+  });
+      </script>
      <script src="./thiep/thiep.js"></script>
 </body>
 </html>
