@@ -742,16 +742,36 @@ textarea{
   width: 100%;
   margin-bottom: 50px;
 }
+/* Đảm bảo box-circle luôn cố định và không ảnh hưởng đến nội dung trang */
+.box-circle {
+  position: fixed; /* Đảm bảo box-circle luôn cố định trên màn hình */
+  top: 20px; /* Đẩy box-circle xuống một chút từ trên cùng */
+  right: 20px; /* Căn box-circle về phía bên phải */
+  z-index: 9999; /* Đảm bảo box-circle nằm trên các phần tử khác */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.lb-circle {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #111;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: var(--font-gotham);
+  text-align: center;
+  line-height: 10px;
+}
 
+/* Thêm hiệu ứng hover cho label */
+.lb-circle:hover {
+  color: #3498db;
+}
 
 .circle {
-  position: fixed;
-  top: 20px; /* Đẩy hình tròn lên phía trên cùng */
-  right: 20px; /* Vị trí của hình tròn căn phải */
-  width: 80px;
-  height: 80px;
-  /* background-color: #3498db; */
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -759,19 +779,20 @@ textarea{
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   overflow: hidden; /* Đảm bảo hình ảnh không bị tràn ra ngoài */
-  transition: transform 1s linear; /* Chuyển động mượt mà */
-  z-index: 2; /* Đảm bảo hình tròn nổi bật trên các phần tử khác */
+  transition: transform 0.5s ease; /* Chuyển động mượt mà */
+  z-index: 2;
 }
 
 /* Khi hình tròn được hover */
 .circle:hover {
-  /* background-color: #2980b9; */
+  transform: scale(1.1); /* Tăng kích thước hình tròn khi hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Hình ảnh bên trong hình tròn */
 .circle-image {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
 }
 
@@ -782,12 +803,12 @@ textarea{
 
 /* Định nghĩa hoạt ảnh xoay */
 @keyframes spin {
-0% {
+  0% {
     transform: rotate(0deg);
-}
-100% {
+  }
+  100% {
     transform: rotate(360deg);
-}
+  }
 }
 
 /* ================================ */
